@@ -61,3 +61,7 @@ gem "bundler-audit"
 gem "ruby_audit"
 # A Ruby static code analyzer and formatter, based on the community Ruby style guide.
 gem "rubocop"
+# Flexible authentication solution for Rails with Warden.
+gem "devise"
+# Simple, efficient background processing for Ruby
+gem 'sidekiq'
