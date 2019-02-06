@@ -64,4 +64,4 @@ gem "rubocop"
 # Flexible authentication solution for Rails with Warden.
 gem "devise"
 # Simple, efficient background processing for Ruby
-gem 'sidekiq'
+gem "sidekiq"
