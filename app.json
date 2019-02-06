@@ -1,0 +1,26 @@
+{
+  "name": "plate",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "env": {
+    "SECRET_KEY_BASE":{
+      "required":true
+    },
+   "RACK_ENV": {
+      "value": "staging"
+    },
+    "RAILS_ENV": {
+      "value": "staging"
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "LOG_LEVEL": {
+      "value": "DEBUG"
+    }
+  },
+  "formation": { },
+  "addons": [ "heroku-postgresql" ],
+  "buildpacks": [ ]
+}
