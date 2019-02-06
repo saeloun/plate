@@ -5,4 +5,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable
+
+  def super_admin?
+    self.role == "super_admin"
+  end
 end

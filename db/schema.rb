@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_02_06_142248) do
     t.inet "last_sign_in_ip"
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
+    t.string "role", default: "member", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
