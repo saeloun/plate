@@ -65,3 +65,9 @@ gem "rubocop"
 gem "devise"
 # Simple, efficient background processing for Ruby
 gem "sidekiq"
+# Bootstrap 4 rubygem for Rails / Sprockets / Hanami / etc
+gem 'bootstrap', '~> 4.2.1'
+
+# for displaying notifications
+gem "jquery-growl-rails"
+gem "jquery-rails"

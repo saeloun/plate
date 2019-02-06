@@ -1,0 +1,11 @@
+<%  flash.each do |name, message|%>
+  <%if message.present? %>
+    <%alert_class = name.to_s == 'alert' ? "danger" : "success" %>
+    <div class=<%= "alert alert-#{alert_class}"%>>
+      <div class="container">
+        <a class="close" data-dismiss="alert"> ×</a>
+        <%= content_tag :div, message, id: "flash_#{name}" if message.is_a?(String) %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
