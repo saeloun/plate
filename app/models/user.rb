@@ -9,4 +9,8 @@ class User < ApplicationRecord
   def super_admin?
     self.role == "super_admin"
   end
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

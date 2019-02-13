@@ -1,31 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to "Navbar", root_path, class:"navbar-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <%= link_to home_dashboard_index_path, class:"nav-link" do %>
-          Home <span class="sr-only">(current)</span>
-         <%end %>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown link
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <%= link_to "Home", root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-primary">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <%= link_to root_path do %>
+              <%image_tag "brand/brand-text.png"%>
+            <%end %>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
       </div>
-    </li>
-    </ul>
+
+      <ul class="navbar-nav ml-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" href="#">
+            <i class="fas fa-info-circle"></i>
+            <span class="nav-link-inner--text d-lg-none">About</span>
+          </a>
+        </li>
+        <%=render "shared/header/signed_in_nav" %>
+      </ul>
+
+    </div>
   </div>
 </nav>

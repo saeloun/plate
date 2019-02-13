@@ -2,3 +2,4 @@
 //= require jquery.growl
 //= require popper
 //= require bootstrap-sprockets
+//= require ./argon
