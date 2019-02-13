@@ -71,3 +71,6 @@ gem 'bootstrap', '~> 4.2.1'
 # for displaying notifications
 gem "jquery-growl-rails"
 gem "jquery-rails"
+
+#  Font-Awesome Sass gem for use in Ruby/Rails projects  https://github.com/FortAwesome/font-awesome-sass
+gem 'font-awesome-sass', '~> 5.6.1'
