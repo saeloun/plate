@@ -1,24 +1,27 @@
-# README
+[![Circle CI](https://circleci.com/gh/vipulnsward/plate.png?style=badge)](https://circleci.com/gh/vipulnsward/plate)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Local Development Setup
 
-Things you may want to cover:
+Prerequisites:
+- Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
+- Install [Ruby version 2.6.1](https://www.ruby-lang.org/en/news/2019/01/30/ruby-2-6-1-released/)
 
-* Ruby version
+```
+bundle install
+bundle exec rake setup
+bin/yarn
+gem install foreman
+foreman start -f Procfile.dev 
+```
+Visit http://localhost:3000 and login with email sam@example.com and password welcome.
 
-* System dependencies
 
-* Configuration
+## Replace Plate with your project name
 
-* Database creation
+Let's say that the project name is `Bottle`. Execute the command below to
+replace all occurrences of `Plate` with `Bottle`.
 
-* Database initialization
+```
+perl -e "s/Plate/Bottle/g;" -pi $(find . -type f)
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
