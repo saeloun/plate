@@ -23,9 +23,15 @@
 
       <ul class="navbar-nav ml-lg-auto">
         <li class="nav-item">
-          <a class="nav-link nav-link-icon" href="#">
+          <a class="nav-link nav-link-icon" href="<%=about_dashboard_index_path %>">
             <i class="fas fa-info-circle"></i>
             <span class="nav-link-inner--text d-lg-none">About</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" href="<%=contact_dashboard_index_path %>">
+            <i class="fas fa-comments"></i>
+            <span class="nav-link-inner--text d-lg-none">Contact</span>
           </a>
         </li>
         <%=render "shared/header/signed_in_nav" %>

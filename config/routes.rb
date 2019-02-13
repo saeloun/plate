@@ -30,6 +30,13 @@ Rails.application.routes.draw do
     end
   end
 
+    resources :dashboard do
+      collection do
+        get :contact
+        get :about
+      end
+    end
+
   root to: "dashboard#home"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
