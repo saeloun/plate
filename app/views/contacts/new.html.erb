@@ -14,30 +14,32 @@
       <div class="card bg-gradient-secondary shadow">
         <div class="card-body p-lg-5">
           <h3 class="mb-1">Contact Us</h3>
-          <%= form_for @contact do |f|%>
-          <div class="form-group mt-5">
-            <div class="input-group input-group-alternative">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+          <%= form_for @contact do |f| %>
+            <div class="form-group mt-5">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                </div>
+                <%= f.text_field :name, class: "form-control", placeholder: "Your name", required: true %>
               </div>
-              <%= f.text_field :name, class: "form-control", placeholder: "Your name" %>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group input-group-alternative">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+            <div class="form-group">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                </div>
+                <%= f.email_field :email, class: "form-control", placeholder: "Email address", required: true %>
               </div>
-              <%= f.email_field :email, class: "form-control", placeholder: "Email address" %>
             </div>
-          </div>
-          <div class="form-group mb-4">
-            <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
-          </div>
-          <div>
-            <%= f.submit "Send Message", class: "btn btn-default btn-round btn-block btn-lg"%>
-          </div>
-          <%end %>
+            <div class="form-group mb-4">
+              <%= f.text_area :message, class: "form-control form-control-alternative",
+                              placeholder: "Type a message...", required: true,
+                              rows: "4", cols: "80" %>
+            </div>
+            <div>
+              <%= f.submit "Send Message", class: "btn btn-default btn-round btn-block btn-lg" %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
