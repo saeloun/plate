@@ -7,7 +7,6 @@
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-primary_dropdown_1">
       <div class="dropdown-item"><%= current_user.name %></div>
       <%= link_to "My Account", profile_path, class: "dropdown-item" %>
-      <%= link_to "Change Password", edit_user_password_path, class: "dropdown-item" %>
       <div class="dropdown-divider"></div>
       <%= link_to "Sign Out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
     </div>

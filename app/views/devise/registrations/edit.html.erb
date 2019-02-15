@@ -53,7 +53,33 @@
                     </div>
                     <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
                   </div>
+                  <div class="text-center text-muted">
+                    <small> Leave blank if you don't want to update password</small>
+                  </div>
                 </div>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation" %>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <%= f.password_field :current_password, class: "form-control", placeholder: "Current Password" %>
+                  </div>
+                  <div class="text-center text-muted">
+                    <small> Current password needed to update your profile</small>
+                  </div>
+                </div>
+
 
                 <div class="text-center">
                   <%= f.submit "Update Profile", class: "btn btn-primary my-4" %>
