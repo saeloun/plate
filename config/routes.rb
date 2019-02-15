@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :contact, only: [:new, :create]
+  resources :contacts
 
   root to: "dashboard#home"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
