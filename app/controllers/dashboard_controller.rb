@@ -5,10 +5,6 @@ class DashboardController < ApplicationController
     render
   end
 
-  def contact
-    render
-  end
-
   def about
     render
   end
