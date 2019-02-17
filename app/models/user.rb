@@ -8,8 +8,8 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
-  def super_admin?
-    self.role == "super_admin"
+  def admin?
+    self.role == "admin"
   end
 
   def name
