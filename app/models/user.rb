@@ -6,8 +6,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable
 
-  def super_admin?
-    self.role == "super_admin"
+  has_one_attached :avatar
+
+  def admin?
+    self.role == "admin"
   end
 
   def name

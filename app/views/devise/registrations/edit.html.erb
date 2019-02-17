@@ -15,11 +15,24 @@
         <div class="col-lg-5">
           <div class="card bg-secondary shadow border-0">
             <div class="card-body px-lg-5 py-lg-5">
+
+              <div class="form-group">
+                <div class="card-profile-image text-center">
+                  <% if resource.avatar.attached? %>
+                    <%= image_tag resource.avatar.variant(resize_to_limit: [200, 200]), class: "rounded-circle" %>
+                  <% else %>
+                    <%= image_tag "profile_placeholder.png", class: "rounded-circle", height: "200px", width: "200px" %>
+                  <% end %>
+                </div>
+              </div>
+
               <div class="text-center text-muted mb-4">
                 My Account
               </div>
-              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
                 <%= devise_error_messages! %>
+
+
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-3">
                     <div class="input-group-prepend">
@@ -43,6 +56,15 @@
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
                     <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-image"></i></span>
+                    </div>
+                    <%= f.file_field :avatar, class: "form-control" %>
                   </div>
                 </div>
 
@@ -84,12 +106,12 @@
                 <div class="text-center">
                   <%= f.submit "Update Profile", class: "btn btn-primary my-4" %>
                 </div>
-              <%end %>
+              <% end %>
             </div>
           </div>
           <div class="row mt-3">
             <div class="col-6">
-              <%= link_to registration_path(resource_name), data: { confirm: "Are you sure you want delete your account?" }, method: :delete, class: "text-light" do %>
+              <%= link_to registration_path(resource_name), data: {confirm: "Are you sure you want delete your account?"}, method: :delete, class: "text-light" do %>
                 <small>Cancel Account</small>
               <% end %>
             </div>
