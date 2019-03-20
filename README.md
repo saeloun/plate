@@ -70,19 +70,18 @@ bundle install
 bundle exec rake setup 
 ```
 
-#### Execute yarn and install foreman
+#### Execute yarn
 ```
 bin/yarn
-gem install foreman
 ```
 
 #### Spinning up the App
 ```
-foreman start -f Procfile.dev
+foreman start
 ```
 
 #### Login as Admin in the app
-* visit http://localhost:5000
+* visit http://localhost:3000
 * login as admin, user name: `sam@example.com`, password: `welcome`
 
 
