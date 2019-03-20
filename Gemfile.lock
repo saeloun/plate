@@ -96,11 +96,15 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dotenv (0.7.0)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.9.25)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
+    foreman (0.64.0)
+      dotenv (~> 0.7.0)
+      thor (>= 0.13.6)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.5.3)
@@ -284,6 +288,7 @@ DEPENDENCIES
   chromedriver-helper
   devise
   font-awesome-sass (~> 5.6.1)
+  foreman
   image_processing (~> 1.2)
   jbuilder (~> 2.5)
   jquery-growl-rails
