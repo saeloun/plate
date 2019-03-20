@@ -7,9 +7,27 @@ http://railstemplate.herokuapp.com
 ### Local Development Setup
 
 #### Prerequisites:
+##### General Software Requirements
+- Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
+- Install [yarn](https://yarnpkg.com/en/docs/install)
+- Install [Ruby version 2.6.1](https://www.ruby-lang.org/en/news/2019/01/30/ruby-2-6-1-released/)
+- Install [Postgres](https://postgresapp.com)
+- Install [Redis](https://redis.io/download)
+- Install [ImageMagick](https://imagemagick.org/script/download.php)
+
+##### Installation steps on mac OS
 - Install [Homebrew](https://brew.sh).
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
-- Install [Ruby version 2.6.1](https://www.ruby-lang.org/en/news/2019/01/30/ruby-2-6-1-released/)
+- Install [RVM](https://rvm.io/rvm/install)
+- Install Ruby 2.6.1 using RVM
+  ```
+  rvm install 2.6.1
+  ```
+  
+  To make 2.6.1 as default and current version execute 
+  ```
+  rvm --default use 2.6.1
+  ```
 - Install PostgreSQL using Homebrew.
    ```
    brew install postgresql
@@ -34,6 +52,10 @@ http://railstemplate.herokuapp.com
   redis-cli ping
   PONG
   ```
+- Install Yarn  
+  ```
+  brew install yarn
+  ``` 
 - Install ImageMagick
   ```
   brew install imagemagick vips
@@ -60,7 +82,7 @@ foreman start -f Procfile.dev
 ```
 
 #### Login as Admin in the app
-* visit http://localhost:3000
+* visit http://localhost:5000
 * login as admin, user name: `sam@example.com`, password: `welcome`
 
 
