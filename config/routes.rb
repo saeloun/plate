@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :users
-    root to: "users#index"
+  authenticated :user do
+    namespace :admin do
+      resources :users
+      root to: "users#index"
+    end
   end
 
   devise_for :users, controllers: { registrations: "registrations" }
