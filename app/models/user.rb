@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
+  validates :email, uniqueness: true
+
   def admin?
     self.role == "admin"
   end

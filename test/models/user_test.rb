@@ -17,4 +17,58 @@ class UserTest < ActiveSupport::TestCase
     user = users :albert
     assert_equal "Albert Smith", user.name
   end
+
+  def test_should_return_error_if_email_is_blank
+    invalid_user = {
+                     first_name: 'Albert',
+                     last_name: 'Smith',
+                     password: 'welcome'
+                   }
+
+    user = User.new(invalid_user)
+
+    assert_not user.valid?
+    assert_equal ["can't be blank"], user.errors[:email]
+  end
+
+  def test_should_return_error_if_password_is_blank
+    invalid_user = {
+                     first_name: 'Steve',
+                     last_name: 'Smith',
+                     email: 'steve@example.com'
+                   }
+
+    user = User.new(invalid_user)
+
+    assert_not user.valid?
+    assert_equal ["can't be blank"], user.errors[:password]
+  end
+
+  def test_should_return_error_if_password_is_too_short
+    invalid_user = {
+                     first_name: 'Steve',
+                     last_name: 'Smith',
+                     email: 'steve@example.com',
+                     password: 'short'
+                   }
+
+    user = User.new(invalid_user)
+
+    assert_not user.valid?
+    assert_equal ["is too short (minimum is 6 characters)"], user.errors[:password]
+  end
+
+  def test_should_return_no_errors_if_user_details_are_valid
+    valid_user = {
+      first_name: 'Steve',
+      last_name: 'Smith',
+      email: 'steve@example.com',
+      password: 'welcome'
+    }
+
+    user = User.new(valid_user)
+
+    assert user.valid?
+    assert_equal({}, user.errors.messages)
+  end
 end
