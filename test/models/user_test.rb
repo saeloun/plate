@@ -20,9 +20,9 @@ class UserTest < ActiveSupport::TestCase
 
   def test_should_return_error_if_email_is_blank
     invalid_user = {
-                     first_name: 'Albert',
-                     last_name: 'Smith',
-                     password: 'welcome'
+                     first_name: "Albert",
+                     last_name: "Smith",
+                     password: "welcome"
                    }
 
     user = User.new(invalid_user)
@@ -33,9 +33,9 @@ class UserTest < ActiveSupport::TestCase
 
   def test_should_return_error_if_password_is_blank
     invalid_user = {
-                     first_name: 'Steve',
-                     last_name: 'Smith',
-                     email: 'steve@example.com'
+                     first_name: "Steve",
+                     last_name: "Smith",
+                     email: "steve@example.com"
                    }
 
     user = User.new(invalid_user)
@@ -46,10 +46,10 @@ class UserTest < ActiveSupport::TestCase
 
   def test_should_return_error_if_password_is_too_short
     invalid_user = {
-                     first_name: 'Steve',
-                     last_name: 'Smith',
-                     email: 'steve@example.com',
-                     password: 'short'
+                     first_name: "Steve",
+                     last_name: "Smith",
+                     email: "steve@example.com",
+                     password: "short"
                    }
 
     user = User.new(invalid_user)
@@ -60,10 +60,10 @@ class UserTest < ActiveSupport::TestCase
 
   def test_should_return_no_errors_if_user_details_are_valid
     valid_user = {
-      first_name: 'Steve',
-      last_name: 'Smith',
-      email: 'steve@example.com',
-      password: 'welcome'
+      first_name: "Steve",
+      last_name: "Smith",
+      email: "steve@example.com",
+      password: "welcome"
     }
 
     user = User.new(valid_user)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This migration comes from active_storage (originally 20170806125915)
 class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
   def change
@@ -14,7 +16,7 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
     end
 
     create_table :active_storage_attachments, id: :uuid  do |t|
-      t.string     :name,     null: false
+      t.string :name,     null: false
       t.uuid :record_id, null: false     # replaces t.references :record
       t.string :record_type, null: false # replaces t.references :record
       t.uuid :blob_id,     null: false   # replaces t.references :blo
