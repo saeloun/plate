@@ -3,7 +3,17 @@
 require "test_helper"
 
 class ContactsMailerTest < ActionMailer::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def test_notify_support_about_contact
+    contact = contacts :charles
+
+    email = ContactsMailer.notify_support_about_contact(contact)
+
+    assert_emails 1 do
+      email.deliver_now
+    end
+
+    assert_equal ['charles@example.com'], email.from
+    assert_equal ['support@plate.com'], email.to
+    assert_equal 'Contact us message from charles@example.com', email.subject
+  end
 end
