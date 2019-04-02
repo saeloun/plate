@@ -5,9 +5,16 @@ class ArraySumService
 
   def initialize(array)
     @array = array
+    raise_error_if_argument_is_not_an_array
   end
 
   def process
     array.inject(&:+)
+  end
+
+  private
+
+  def raise_error_if_argument_is_not_an_array
+    raise 'Passed argument is not an array' if array.class != Array
   end
 end
