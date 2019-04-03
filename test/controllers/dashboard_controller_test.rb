@@ -3,7 +3,16 @@
 require "test_helper"
 
 class DashboardControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  def test_home_success
+    sign_in users(:admin)
+    get '/'
+
+    assert_response :success
+  end
+
+  def test_about_success
+    get about_dashboard_index_url
+
+    assert_response :success
+  end
 end
