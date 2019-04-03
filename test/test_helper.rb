@@ -7,7 +7,10 @@ def enable_test_coverage
     add_filter "/test/"
 
     add_group "Models", "app/models"
+
     add_group "Controllers", "app/controllers"
+
+    add_group "Mailers", "app/mailers"
   end
 end
 

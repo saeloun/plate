@@ -70,16 +70,16 @@ gem "devise"
 # Simple, efficient background processing for Ruby
 gem "sidekiq"
 # Bootstrap 4 rubygem for Rails / Sprockets / Hanami / etc
-gem 'bootstrap', '~> 4.2.1'
+gem "bootstrap", "~> 4.2.1"
 
 # for displaying notifications
 gem "jquery-growl-rails"
 gem "jquery-rails"
 
 #  Font-Awesome Sass gem for use in Ruby/Rails projects  https://github.com/FortAwesome/font-awesome-sass
-gem 'font-awesome-sass', '~> 5.6.1'
+gem "font-awesome-sass", "~> 5.6.1"
 
 
-gem 'image_processing', '~> 1.2'
+gem "image_processing", "~> 1.2"
 
 gem "administrate"
