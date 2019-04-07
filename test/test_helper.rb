@@ -24,14 +24,13 @@ class ActionDispatch::IntegrationTest
 end
 
 class ActiveSupport::TestCase
+  include FactoryBot::Syntax::Methods
+
   # Run tests in parallel with specified workers
   # TODO: When this line is uncommented SimpleCov reports incorrect code coverage.
   #       Issue: https://github.com/saeloun/plate/issues/39
   #
   # parallelize(workers: :number_of_processors)
-
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
 
   # Add more helper methods to be used by all tests here...
 end

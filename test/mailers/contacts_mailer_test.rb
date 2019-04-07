@@ -4,7 +4,7 @@ require "test_helper"
 
 class ContactsMailerTest < ActionMailer::TestCase
   def test_notify_support_about_contact
-    contact = contacts :charles
+    contact = create(:contact)
 
     email = ContactsMailer.notify_support_about_contact(contact)
 

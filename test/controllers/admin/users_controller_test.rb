@@ -4,15 +4,15 @@ require "test_helper"
 
 class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
   def setup
-    sign_in users :admin
+    sign_in create(:super_admin_user)
   end
 
   def test_update_user_without_password
-    user = users :albert
+    user = create(:user)
     update_user_params = {
                            user: {
-                             email: "albert@example.com",
-                             first_name: "Albert name change",
+                             email: "sam@example.com",
+                             first_name: "Sam name change",
                              last_name: "Smith"
                            }
                          }
