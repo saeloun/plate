@@ -14,7 +14,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def test_should_return_first_name_and_last_name_as_name
-    user = create(:user)
+    user_attributes = {
+                        email: "sam@example.com",
+                        first_name: "Sam",
+                        last_name: "Smith"
+                      }
+
+    user = create(:user, user_attributes)
     assert_equal "Sam Smith", user.name
   end
 
