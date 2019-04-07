@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.6.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 6.0.0.beta1"
+gem "rails", "~> 6.0.0.beta3"
 # Use postgresql as the database for Active Record
 gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
@@ -42,6 +42,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem "foreman", require: false
 end
 
 group :test do
@@ -50,6 +51,9 @@ group :test do
   gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem "chromedriver-helper"
+
+  # for test coverage report
+  gem "simplecov", require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -66,14 +70,16 @@ gem "devise"
 # Simple, efficient background processing for Ruby
 gem "sidekiq"
 # Bootstrap 4 rubygem for Rails / Sprockets / Hanami / etc
-gem 'bootstrap', '~> 4.2.1'
+gem "bootstrap", "~> 4.2.1"
 
 # for displaying notifications
 gem "jquery-growl-rails"
 gem "jquery-rails"
 
 #  Font-Awesome Sass gem for use in Ruby/Rails projects  https://github.com/FortAwesome/font-awesome-sass
-gem 'font-awesome-sass', '~> 5.6.1'
+gem "font-awesome-sass", "~> 5.6.1"
 
 
-gem 'image_processing', '~> 1.2'
+gem "image_processing", "~> 1.2"
+
+gem "administrate"
