@@ -10,7 +10,7 @@ http://railstemplate.herokuapp.com
 ##### General Software Requirements
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
 - Install [yarn](https://yarnpkg.com/en/docs/install)
-- Install [Ruby version 2.6.1](https://www.ruby-lang.org/en/news/2019/01/30/ruby-2-6-1-released/)
+- Install [Ruby version 2.6.2](https://www.ruby-lang.org/en/news/2019/03/13/ruby-2-6-2-released/)
 - Install [Postgres](https://postgresapp.com)
 - Install [Redis](https://redis.io/download)
 - Install [ImageMagick](https://imagemagick.org/script/download.php)
@@ -19,14 +19,14 @@ http://railstemplate.herokuapp.com
 - Install [Homebrew](https://brew.sh).
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
 - Install [RVM](https://rvm.io/rvm/install)
-- Install Ruby 2.6.1 using RVM
+- Install Ruby 2.6.2 using RVM
   ```
-  rvm install 2.6.1
+  rvm install 2.6.2
   ```
   
-  To make 2.6.1 as default and current version execute 
+  To make 2.6.2 as default and current version execute 
   ```
-  rvm --default use 2.6.1
+  rvm --default use 2.6.2
   ```
 - Install PostgreSQL using Homebrew.
    ```
