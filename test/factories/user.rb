@@ -2,10 +2,9 @@
 
 FactoryBot.define do
   factory :user do
-    random_number = SecureRandom.hex(10)
-    email { "#{random_number}@example.com" }
-    first_name { random_number }
-    last_name { random_number }
+    email { Faker::Internet.email }
+    first_name { Faker::Name.first_name }
+    last_name { Faker::Name.last_name }
     password { "welcome" }
 
     trait :with_super_admin_role do
