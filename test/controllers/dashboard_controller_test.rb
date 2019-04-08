@@ -4,7 +4,7 @@ require "test_helper"
 
 class DashboardControllerTest < ActionDispatch::IntegrationTest
   def test_home_success
-    sign_in users(:admin)
+    sign_in create(:super_admin_user)
     get "/"
 
     assert_response :success
