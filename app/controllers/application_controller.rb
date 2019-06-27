@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     def set_honeybadger_context
       Honeybadger.context(
         user_id: current_user&.id,
-        params: params.to_unsafe_hash,
+        user_email: current_user&.email,
         url: request.url
       )
     end
