@@ -5,7 +5,6 @@ module Admin
     before_action :delete_password_if_blank, only: :update
 
     private
-
       # Method is overridden so that admin user can update details
       # of any existing user from admin dashboard
       # Check this link for reference

@@ -13,7 +13,6 @@ class ArraySumService
   end
 
   private
-
     def raise_error_if_argument_is_not_an_array
       raise "Passed argument is not an array" unless array.is_a? Array
     end
