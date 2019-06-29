@@ -241,6 +241,11 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-performance (1.4.0)
+      rubocop (>= 0.71.0)
+    rubocop-rails (2.1.0)
+      rack (>= 1.1)
+      rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
     ruby-vips (2.0.14)
       ffi (~> 1.9)
@@ -362,6 +367,8 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 6.0.0.rc1)
   rubocop
+  rubocop-performance
+  rubocop-rails
   ruby_audit
   sass-rails (~> 5.0)
   selenium-webdriver
