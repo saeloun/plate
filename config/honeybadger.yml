@@ -1,0 +1,7 @@
+---
+api_key: <%= ENV['HONEYBADGER_API_KEY'] %>
+
+request:
+  filter_keys:
+    - password
+    - password_confirmation
