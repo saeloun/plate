@@ -9,7 +9,6 @@ FactoryBot.define do
 
     trait :with_super_admin_role do
       before(:create) do |user|
-        user.email = "admin@example.com"
         user.role = "admin"
       end
     end

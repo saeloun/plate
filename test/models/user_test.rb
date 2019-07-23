@@ -15,7 +15,7 @@ class UserTest < ActiveSupport::TestCase
 
   def test_should_return_first_name_and_last_name_as_name
     user_attributes = {
-                        email: "sam@example.com",
+        email: Faker::Internet.email,
                         first_name: "Sam",
                         last_name: "Smith"
                       }
