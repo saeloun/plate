@@ -4,7 +4,7 @@
 class ContactsMailerPreview < ActionMailer::Preview
   def notify_support_about_contact
     ContactsMailer.notify_support_about_contact(Contact.new(name: "Sam Smith",
-                                                            email: "sam@example.com",
+                                                            email: Faker::Internet.email,
                                                             message: "Nice message"))
   end
 end

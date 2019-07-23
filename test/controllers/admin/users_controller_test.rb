@@ -11,7 +11,7 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
     user = create(:user)
     update_user_params = {
                            user: {
-                             email: "sam@example.com",
+                             email: Faker::Internet.email,
                              first_name: "Sam name change",
                              last_name: "Smith"
                            }

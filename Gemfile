@@ -3,10 +3,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.6.2"
+ruby "2.6.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 6.0.0.rc1"
+gem "rails", "~> 6.0.0.rc2"
 # Use postgresql as the database for Active Record
 gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
@@ -74,7 +74,7 @@ gem "devise"
 # Simple, efficient background processing for Ruby
 gem "sidekiq"
 # Bootstrap 4 rubygem for Rails / Sprockets / Hanami / etc
-gem "bootstrap", "~> 4.2.1"
+gem "bootstrap", "~> 4.3.1"
 
 # for displaying notifications
 gem "jquery-growl-rails"
@@ -89,4 +89,4 @@ gem "image_processing", "~> 1.2"
 gem "administrate"
 
 # Error monitoring for Rails
-gem 'honeybadger', '~> 4.0'
+gem "honeybadger", "~> 4.0"
