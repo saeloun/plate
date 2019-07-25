@@ -2,6 +2,7 @@
 
 class ForwardsMailboxTest < ActionMailbox::TestCase
   test "directly recording a client forward for a forwarder and forwardee corresponding to one project" do
+    skip "Needs change of fixtures"
     assert_difference -> { people(:david).buckets.first.recordings.count } do
       receive_inbound_email_from_mail \
         to: "save@example.com",
