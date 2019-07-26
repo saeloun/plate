@@ -32,9 +32,9 @@
               </div>
             </div>
             <div class="form-group mb-4">
-              <%= f.text_area :message, class: "form-control form-control-alternative",
-                              placeholder: "Type a message...", required: true,
-                              rows: "4", cols: "80" %>
+              <%= f.rich_text_area :content, class: "form-control form-control-alternative",
+                                   placeholder: "Type a message...", required: true,
+                                   rows: "4", cols: "80"  %>
             </div>
             <div>
               <%= f.submit "Send Message", class: "btn btn-default btn-round btn-block btn-lg" %>
