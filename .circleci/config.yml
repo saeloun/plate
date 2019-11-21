@@ -30,6 +30,8 @@ jobs:
           - plate-yarn-deps-{{ .Branch }}
           - plate-yarn-deps
 
+      - run: gem install bundler:2.0.2
+
       - run: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
       # Enable if using yarn
       - run: bin/yarn install
