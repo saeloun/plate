@@ -82,7 +82,7 @@ foreman start
 
 #### Login as Admin in the app
 * visit http://localhost:3000
-* login as admin, user name: `sam@example.com`, password: `welcome`
+* login as admin, user name: `jane@example.com`, password: `welcome`
 
 
 ### Replace Plate with your project name
