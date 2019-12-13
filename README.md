@@ -93,3 +93,10 @@ replace all occurrences of `Plate` with `Bottle`.
 ```
 perl -e "s/Plate/Bottle/g;" -pi $(find . -type f)
 ```
+
+
+###  About Saeloun
+
+plate is maintained by [Saeloun Inc.](https://www.saeloun.com/)
+
+We love open source software! See our other projects or hire us to design, develop, and grow your product.
