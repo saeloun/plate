@@ -178,8 +178,8 @@ GEM
     public_suffix (4.0.3)
     puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.1.1)
-    rack-protection (2.0.7)
+    rack (2.2.2)
+    rack-protection (2.0.8.1)
       rack
     rack-proxy (0.6.5)
       rack
@@ -253,9 +253,9 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    sidekiq (6.0.4)
+    sidekiq (6.0.5)
       connection_pool (>= 2.2.2)
-      rack (>= 2.0.0)
+      rack (~> 2.0)
       rack-protection (>= 2.0.0)
       redis (>= 4.1.0)
     simplecov (0.18.2)
