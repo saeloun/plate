@@ -89,4 +89,4 @@ gem "image_processing", "~> 1.10"
 gem "administrate"
 
 # Error monitoring for Rails
-gem "honeybadger", "~> 4.5"
+gem "honeybadger", "~> 4.6"
