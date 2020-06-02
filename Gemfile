@@ -81,7 +81,7 @@ gem "jquery-growl-rails"
 gem "jquery-rails"
 
 #  Font-Awesome Sass gem for use in Ruby/Rails projects  https://github.com/FortAwesome/font-awesome-sass
-gem "font-awesome-sass", "~> 5.12.0"
+gem "font-awesome-sass", "~> 5.13.0"
 
 
 gem "image_processing", "~> 1.10"
