@@ -19,14 +19,14 @@ http://railstemplate.herokuapp.com
 - Install [Homebrew](https://brew.sh).
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
 - Install [RVM](https://rvm.io/rvm/install)
-- Install Ruby 2.7.1 using RVM
+- Install Ruby 2.7.2 using RVM
   ```
-  rvm install 2.7.1
+  rvm install 2.7.2
   ```
 
-  To make 2.7.1 as default and current version execute
+  To make 2.7.2 as default and current version execute
   ```
-  rvm --default use 2.7.1
+  rvm --default use 2.7.2
   ```
 - Install PostgreSQL using Homebrew.
    ```
