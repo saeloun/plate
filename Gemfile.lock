@@ -116,7 +116,7 @@ GEM
     faker (2.13.0)
       i18n (>= 1.6, < 2)
     ffi (1.13.1)
-    font-awesome-sass (5.13.0)
+    font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     foreman (0.87.2)
     globalid (0.4.2)
@@ -322,7 +322,7 @@ DEPENDENCIES
   devise
   factory_bot_rails
   faker
-  font-awesome-sass (~> 5.13.0)
+  font-awesome-sass (~> 5.15.1)
   foreman
   honeybadger (~> 4.6)
   image_processing (~> 1.10)
