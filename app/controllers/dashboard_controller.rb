@@ -2,7 +2,8 @@
 
 class DashboardController < ApplicationController
   def home
-    render
+    redirect_to(controller: "lists", action: "index")
+    # render
   end
 
   def about
