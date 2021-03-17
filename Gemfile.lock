@@ -125,7 +125,7 @@ GEM
     foreman (0.87.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    honeybadger (4.7.3)
+    honeybadger (4.8.0)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
@@ -331,7 +331,7 @@ DEPENDENCIES
   faker
   font-awesome-sass (~> 5.13.0)
   foreman
-  honeybadger (~> 4.6)
+  honeybadger (~> 4.8)
   image_processing (~> 1.10)
   jbuilder (~> 2.10)
   jquery-growl-rails
