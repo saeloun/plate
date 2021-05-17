@@ -149,7 +149,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    listen (3.4.1)
+    listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.1)
@@ -333,7 +333,7 @@ DEPENDENCIES
   jbuilder (~> 2.10)
   jquery-growl-rails
   jquery-rails
-  listen (>= 3.0.5, < 3.5)
+  listen (>= 3.0.5, < 3.6)
   pg (>= 0.18, < 2.0)
   puma (< 6)
   rails (~> 6.0)
