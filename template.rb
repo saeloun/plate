@@ -150,9 +150,7 @@ def copy_templates
   directory "app", force: true
   directory "config", force: true
   directory "lib", force: true
-
-  route "get '/terms', to: 'home#terms'"
-  route "get '/privacy', to: 'home#privacy'"
+  
 end
 
 def add_sidekiq
@@ -219,9 +217,7 @@ after_bundle do
   add_webpack
   add_javascript
   add_sidekiq
-
   copy_templates
-  add_sitemap
 
   rails_command "active_storage:install"
 
