@@ -76,7 +76,7 @@ rails new myapp -d postgresql -m https://raw.githubusercontent.com/ashwin47/plat
 Or if you have downloaded this repo, you can reference template.rb locally:
 
 ```bash
-rails new myapp -d postgresql -m template.rb --skip-javascript
+rails new myapp -d postgresql -m template.rb
 ```
 
 ❓Having trouble? Try adding `DISABLE_SPRING=1` before `rails new`. Spring will get confused if you create an app with the same name twice.
