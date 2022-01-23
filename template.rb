@@ -1,7 +1,7 @@
 require "fileutils"
 require "shellwords"
 
-# Copied from: https://github.com/mattbrictson/rails-template
+# Copied from: https://github.com/excid3/jumpstart
 # Add this template directory to source_paths so that Thor actions like
 # copy_file and template resolve against our source files. If this file was
 # invoked remotely via HTTP, that means the files are not present locally.
@@ -150,7 +150,7 @@ def copy_templates
   directory "app", force: true
   directory "config", force: true
   directory "lib", force: true
-  
+
 end
 
 def add_sidekiq
@@ -166,38 +166,6 @@ def add_sidekiq
     end
   RUBY
   insert_into_file "config/routes.rb", "#{content}\n\n", after: "Rails.application.routes.draw do\n"
-end
-
-def add_administrate
-  generate "administrate:install"
-
-  append_to_file "app/assets/config/manifest.js" do
-    "//= link administrate/application.css\n//= link administrate/application.js"
-  end
-
-  gsub_file "app/dashboards/announcement_dashboard.rb",
-    /announcement_type: Field::String/,
-    "announcement_type: Field::Select.with_options(collection: Announcement::TYPES)"
-
-  gsub_file "app/dashboards/user_dashboard.rb",
-    /email: Field::String/,
-    "email: Field::String,\n    password: Field::String.with_options(searchable: false)"
-
-  gsub_file "app/dashboards/user_dashboard.rb",
-    /FORM_ATTRIBUTES = \[/,
-    "FORM_ATTRIBUTES = [\n    :password,"
-
-  gsub_file "app/controllers/admin/application_controller.rb",
-    /# TODO Add authentication logic here\./,
-    "redirect_to '/', alert: 'Not authorized.' unless user_signed_in? && current_user.admin?"
-
-  environment do <<-RUBY
-    # Expose our application's helpers to Administrate
-    config.to_prepare do
-      Administrate::ApplicationController.helper #{@app_name.camelize}::Application.helpers
-    end
-  RUBY
-  end
 end
 
 
