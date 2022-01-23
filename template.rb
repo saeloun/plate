@@ -38,24 +38,24 @@ def rails_6?
 end
 
 def add_gems
-  gem 'administrate', github: "excid3/administrate", branch: 'jumpstart'
+  gem 'administrate'
   gem 'bootstrap', '5.0.0.alpha3'
   gem 'devise', '~> 4.7', '>= 4.7.1'
-  gem 'devise_masquerade', '~> 1.2'
   gem 'font-awesome-sass', '~> 5.13'
   gem 'friendly_id', '~> 5.3'
   gem 'image_processing'
   gem 'mini_magick', '~> 4.10', '>= 4.10.1'
   gem 'name_of_person', '~> 1.1'
-  gem 'noticed', '~> 1.2'
-  gem 'omniauth-facebook', '~> 6.0'
-  gem 'omniauth-github', '~> 1.4'
-  gem 'omniauth-twitter', '~> 1.4'
-  gem 'pundit', '~> 2.1'
   gem 'redis', '~> 4.2', '>= 4.2.2'
   gem 'sidekiq', '~> 6.0', '>= 6.0.3'
-  gem 'sitemap_generator', '~> 6.1', '>= 6.1.2'
-  gem 'whenever', require: false
+  gem "honeybadger", "~> 4.8"
+  gem "rubocop"
+  gem "rubocop-performance"
+  gem "rubocop-rails"
+  gem "ruby_audit"
+  gem "bundler-audit"
+  gem "jquery-growl-rails"
+  gem "jquery-rails"
 
   if rails_5?
     gsub_file "Gemfile", /gem 'sqlite3'/, "gem 'sqlite3', '~> 1.3.0'"
@@ -108,10 +108,6 @@ def add_users
 
   # Add Devise masqueradable to users
   inject_into_file("app/models/user.rb", "omniauthable, :masqueradable, :", after: "devise :")
-end
-
-def add_authorization
-  generate 'pundit:install'
 end
 
 def add_webpack
@@ -210,22 +206,8 @@ def add_administrate
 end
 
 
-def add_friendly_id
-  generate "friendly_id"
-
-  insert_into_file(
-    Dir["db/migrate/**/*friendly_id_slugs.rb"].first,
-    "[5.2]",
-    after: "ActiveRecord::Migration"
-  )
-end
-
 def stop_spring
   run "spring stop"
-end
-
-def add_sitemap
-  rails_command "sitemap:install"
 end
 
 # Main setup
@@ -237,11 +219,9 @@ after_bundle do
   set_application_name
   stop_spring
   add_users
-  add_authorization
   add_webpack
   add_javascript
   add_sidekiq
-  add_friendly_id
 
   copy_templates
   add_sitemap
@@ -261,7 +241,7 @@ after_bundle do
   end
 
   say
-  say "Jumpstart app successfully created!", :blue
+  say "Plate app successfully created!", :blue
   say
   say "To get started with your new app:", :green
   say "  cd #{app_name}"
