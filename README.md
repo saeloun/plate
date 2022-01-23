@@ -15,6 +15,9 @@ http://railstemplate.herokuapp.com
 - Install [Redis](https://redis.io/download)
 - Install [ImageMagick](https://imagemagick.org/script/download.php)
 
+
+rails new myapp -d postgresql -m https://raw.githubusercontent.com/ashwin47/plate/main/template.rb
+
 ##### Installation steps on mac OS
 - Install [Homebrew](https://brew.sh).
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
@@ -64,16 +67,20 @@ http://railstemplate.herokuapp.com
   We are using [image_processing](https://github.com/janko/image_processing) gem for file uploads.
   Need to install this so that images are rendered locally.
 
-#### Bundle Install and Setup DB
-```
-bundle install
-bundle exec rake setup
+#### Creating a new app
+
+```bash
+rails new myapp -d postgresql -m https://raw.githubusercontent.com/ashwin47/plate/main/template.rb
 ```
 
-#### Execute yarn
+Or if you have downloaded this repo, you can reference template.rb locally:
+
+```bash
+rails new myapp -d postgresql -m template.rb --skip-javascript
 ```
-bin/yarn
-```
+
+❓Having trouble? Try adding `DISABLE_SPRING=1` before `rails new`. Spring will get confused if you create an app with the same name twice.
+
 
 #### Spinning up the App
 ```
@@ -83,17 +90,6 @@ foreman start
 #### Login as Admin in the app
 * visit http://localhost:3000
 * login as admin, user name: `jane@example.com`, password: `welcome`
-
-
-### Replace Plate with your project name
-
-Let's say that the project name is `Bottle`. Execute the command below to
-replace all occurrences of `Plate` with `Bottle`.
-
-```
-perl -e "s/Plate/Bottle/g;" -pi $(find . -type f)
-```
-
 
 ###  About Saeloun
 
