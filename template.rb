@@ -42,11 +42,8 @@ def add_gems
   gem 'bootstrap', '5.0.0.alpha3'
   gem 'devise', '~> 4.7', '>= 4.7.1'
   gem 'font-awesome-sass', '~> 5.13'
-  gem 'friendly_id', '~> 5.3'
   gem 'image_processing'
   gem 'mini_magick', '~> 4.10', '>= 4.10.1'
-  gem 'name_of_person', '~> 1.1'
-  gem 'redis', '~> 4.2', '>= 4.2.2'
   gem 'sidekiq', '~> 6.0', '>= 6.0.3'
   gem "honeybadger", "~> 4.8"
   gem "rubocop"
