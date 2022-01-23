@@ -15,9 +15,6 @@ http://railstemplate.herokuapp.com
 - Install [Redis](https://redis.io/download)
 - Install [ImageMagick](https://imagemagick.org/script/download.php)
 
-
-rails new myapp -d postgresql -m https://raw.githubusercontent.com/ashwin47/plate/main/template.rb
-
 ##### Installation steps on mac OS
 - Install [Homebrew](https://brew.sh).
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
@@ -81,6 +78,14 @@ rails new myapp -d postgresql -m template.rb
 
 ❓Having trouble? Try adding `DISABLE_SPRING=1` before `rails new`. Spring will get confused if you create an app with the same name twice.
 
+
+#### Setup database
+
+  Update `config/database.yml` with your database credentials
+
+  `rails db:create && rails db:migrate`
+
+  `rails g administrate:install` # Generate admin dashboards
 
 #### Spinning up the App
 ```
