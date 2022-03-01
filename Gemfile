@@ -84,7 +84,7 @@ gem "jquery-rails"
 gem "font-awesome-sass", "~> 5.15.1"
 
 
-gem "image_processing", "~> 1.10"
+gem "image_processing", "~> 1.12"
 
 gem "administrate"
 
